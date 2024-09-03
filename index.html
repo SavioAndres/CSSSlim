@@ -1,76 +1,180 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSSSlim</title>
-    <link rel="stylesheet" href="cssslim.css"> <!-- Supondo que o framework CSS esteja salvo como framework.css -->
+    <link rel="stylesheet" href="cssslim.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+        pre {
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+        }
+        .keyword { color: #c678dd; } /* Purple for keywords */
+        .tag { color: #61afef; } /* Blue for tags */
+        .attr-name { color: #d19a66; } /* Orange for attribute names */
+        .attr-value { color: #98c379; } /* Green for attribute values */
+        .string { color: #98c379; } /* Green for strings */
+        .result {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
         <header class="text-center mb-4">
-            <h1>Bem-vindo ao Meu Framework CSS</h1>
-            <p class="lead">Este é um exemplo de página utilizando o framework CSS criado.</p>
+            <div class="text-right">v1.0.0</div>
+            <h1>CSSSlim</h1>
+            <p>CSSSlim Simple and Complete Sheet to Help with Website Styling.</p>
         </header>
 
         <section class="row">
-            <div class="col-4">
-                <h2>Sobre o Framework</h2>
-                <p>Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.</p>
-            </div>
-            <div class="col-4">
-                <h2>Componentes Incluídos</h2>
-                <ul>
-                    <li>Sistema de grid responsivo</li>
-                    <li>Tipografia básica</li>
-                    <li>Botões estilizados</li>
-                    <li>Formulários personalizados</li>
-                    <li>Classes utilitárias</li>
-                </ul>
-            </div>
-            <div class="col-4">
-                <h2>Componentes Incluídos</h2>
-                <ul>
-                    <li>Sistema de grid responsivo</li>
-                    <li>Tipografia básica</li>
-                    <li>Botões estilizados</li>
-                    <li>Formulários personalizados</li>
-                    <li>Classes utilitárias</li>
-                </ul>
+
+            <div class="col-12">
+                <h2>Grid System</h2>
+                <h3>Code</h3>
+                    <pre><code>&lt;<span class="tag">section</span> <span class="attr-name">class</span>=<span class="attr-value">"row"</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 1&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 2&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 3&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">section</span>&gt;</code></pre>
+                <h3>Result</h3>
+                <div class="result">
+                    <section class="row">
+                        <div class="col-4">
+                            <h2>Sobre o Framework 1</h2>
+                            <p>Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.</p>
+                        </div>
+                        <div class="col-4">
+                            <h2>Sobre o Framework 2</h2>
+                            <p>Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.</p>
+                        </div>
+                        <div class="col-4">
+                            <h2>Sobre o Framework 3</h2>
+                            <p>Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.</p>
+                        </div>
+                    </section>
+                </div>
             </div>
         </section>
 
         <section class="row mt-4">
             <div class="col-12">
-                <h2 class="text-center">Formulário de Contato</h2>
-                <form action="#" method="post">
-                    <div class="mb-3">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" placeholder="Seu nome">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Seu email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Sua mensagem"></textarea>
-                    </div>
-                    <input type="submit" value="Enviar" class="btn btn-primary">
-                </form>
+                <h2>Typography</h2>
+                <h3>Code</h3>
+                    <pre><code>&lt;<span class="tag">section</span> <span class="attr-name">class</span>=<span class="attr-value">"row"</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 1&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 2&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 3&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">section</span>&gt;</code></pre>
+                <h3>Result</h3>
+                <div class="result">
+                    <h1>h1</h1>
+                    <h2>h2</h2>
+                    <h3>h3</h3>
+                    <h4>h4</h4>
+                    <h5>h5</h5>
+                    <h6>h6</h6>
+                    <p>paragraph</p>
+                    <p class="text-left">text-left</p>
+                    <p class="text-center">text-center</p>
+                    <p class="text-right">text-right</p>
+                </div>
             </div>
         </section>
 
-        <section class="row mt-5">
-            <div class="col-4">
-                <button class="btn btn-primary btn-block">Botão Primário</button>
+        <section class="row mt-4">
+            <div class="col-12">
+                <h2>Form</h2>
+                <h3>Code</h3>
+                    <pre><code>&lt;<span class="tag">section</span> <span class="attr-name">class</span>=<span class="attr-value">"row"</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 1&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 2&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+    &lt;<span class="tag">div</span> <span class="attr-name">class</span>=<span class="attr-value">"col-4"</span>&gt;
+        &lt;<span class="tag">h2</span>&gt;Sobre o Framework 3&lt;/<span class="tag">h2</span>&gt;
+        &lt;<span class="tag">p</span>&gt;Este framework CSS foi desenvolvido para fornecer uma base sólida para o desenvolvimento de páginas web responsivas e esteticamente agradáveis.&lt;/<span class="tag">p</span>&gt;
+    &lt;/<span class="tag">div</span>&gt;
+&lt;/<span class="tag">section</span>&gt;</code></pre>
+                <h3>Result</h3>
+                <div class="result">
+                    <form action="#" method="post">
+                        <div class="mb-3">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Sua mensagem"></textarea>
+                        </div>
+                        <input type="submit" value="Enviar" class="btn btn-primary">
+                    </form>
+                </div>
             </div>
-            <div class="col-4">
-                <button class="btn btn-secondary btn-block">Botão Secundário</button>
-            </div>
-            <div class="col-4">
-                <button class="btn btn-danger btn-block">Botão Perigoso</button>
+        </section>
+
+        <section class="row mt-4">
+            <div class="col-12">
+                <h2>Buttons</h2>
+                <h3>Code</h3>
+                    <pre><code>&lt;<span class="tag">button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn"</span>&gt;Button&lt;/<span class="tag">button</span>&gt;
+&lt;<span class="tag">button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn bg-primary"</span>&gt;Primary Button&lt;/<span class="tag">button</span>&gt;
+&lt;<span class="tag">button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn bg-secondary"</span>&gt;Secondary Button&lt;/<span class="tag">button</span>&gt;
+&lt;<span class="tag">button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn bg-success"</span>&gt;Success Button&lt;/<span class="tag">button</span>&gt;
+&lt;<span class="tag">button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn bg-danger"</span>&gt;Danger Button&lt;/<span class="tag">button</span>&gt;
+&lt;<span class="tag">button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn bg-warning"</span>&gt;Warning Button&lt;/<span class="tag">button</span>&gt;
+&lt;<span class="tag">button</span> <span class="attr-name">class</span>=<span class="attr-value">"btn bg-info"</span>&gt;Info Button&lt;/<span class="tag">button</span>&gt;</code></pre>
+                <h3>Result</h3>
+                <div class="result">
+                    <button class="btn">Button</button>
+                    <button class="btn bg-primary">Primary Button</button>
+                    <button class="btn bg-secondary">Secondary Button</button>
+                    <button class="btn bg-success">Success Button</button>
+                    <button class="btn bg-danger">Danger Button</button>
+                    <button class="btn bg-warning">Warning Button</button>
+                    <button class="btn bg-info">Info Button</button>
+                </div>
             </div>
         </section>
         
